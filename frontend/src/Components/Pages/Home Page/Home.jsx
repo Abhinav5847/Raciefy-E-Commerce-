@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { AppContext } from "../../Components/AppProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./home.css";
+import "./Home.css";
 
 export default function Home() {
   const navigate = useNavigate();
