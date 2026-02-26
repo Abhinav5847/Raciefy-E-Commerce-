@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const adminAxios = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  // baseURL: "http://127.0.0.1:8000",
+   baseURL: process.env.REACT_APP_API_URL,
 });
 
 
@@ -56,7 +57,8 @@ adminAxios.interceptors.response.use(
         console.log("Refreshing admin token...");
 
         const res = await axios.post(
-          "http://127.0.0.1:8000/api/token/refresh/",
+          // "http://127.0.0.1:8000/api/token/refresh/",
+          `${process.env.REACT_APP_API_URL}/api/token/refresh/`,
           { refresh: refreshToken }
         );
 
