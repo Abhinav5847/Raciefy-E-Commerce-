@@ -2,7 +2,7 @@ import axios from "axios";
 
 const adminAxios = axios.create({
   // baseURL: "http://127.0.0.1:8000",
-   baseURL: process.env.REACT_APP_API_URL,
+   baseURL: import.meta.env.VITE_REACT_APP_API_URL,
 });
 
 
