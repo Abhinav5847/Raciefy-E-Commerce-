@@ -69,7 +69,7 @@ export default function Products() {
                   >
                     <div className="position-relative">
                       <img
-                        src={item.image} q
+                        src={item.image} 
                         alt={item.name}
                         className="card-img-top p-3 img-fluid"
                         style={{ height: "180px", objectFit: "contain" }}
