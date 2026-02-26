@@ -1,0 +1,19 @@
+
+
+.hero-image {
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+} 
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+}
