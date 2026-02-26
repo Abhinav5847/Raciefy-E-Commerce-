@@ -58,7 +58,7 @@ adminAxios.interceptors.response.use(
 
         const res = await axios.post(
           // "http://127.0.0.1:8000/api/token/refresh/",
-          `${process.env.REACT_APP_API_URL}/api/token/refresh/`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/api/token/refresh/`,
           { refresh: refreshToken }
         );
 

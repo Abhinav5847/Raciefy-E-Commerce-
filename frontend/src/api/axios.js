@@ -40,7 +40,7 @@ axiosInstance.interceptors.response.use(
 
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_API_URL}/api/token/refresh/`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/api/token/refresh/`,
           // "http://127.0.0.1:8000/api/token/refresh/",
           { refresh }
         );
