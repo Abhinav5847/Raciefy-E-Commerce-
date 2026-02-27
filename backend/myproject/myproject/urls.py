@@ -15,13 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path,include,re_path
 from rest_framework import permissions
 # from drf_yasg.views import get_schema_view
 # from drf_yasg import openapi
 from rest_framework_simplejwt.views import TokenRefreshView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
-
+from django.views.generic import TemplateView
+import os
+from pathlib import Path
 # schema_view = get_schema_view(
 #     openapi.Info(
 #         title="My API",
@@ -31,6 +33,10 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 #     public=True,
 #     permission_classes=(permissions.AllowAny,),
 # )
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend', 'build')
+
 
 
 
@@ -48,4 +54,6 @@ urlpatterns = [
     path('payment/',include('payment.urls')),
     path('wishlist/',include('wishlist.urls')),
     path('adminpanel/',include('adminpanel.urls')),
+
+     re_path(r'^.*$', TemplateView.as_view(template_name=os.path.join(FRONTEND_DIR, 'index.html'))),
 ]
