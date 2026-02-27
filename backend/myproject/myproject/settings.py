@@ -42,7 +42,7 @@ DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','raciefy-e-commerce.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','raciefy-e-commerce.onrender.com','raciefy-e-commerce-1.onrender.com']
 
 
 # Application definition
@@ -229,6 +229,7 @@ AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend',
 
 CSRF_TRUSTED_ORIGINS = [
     "https://raciefy-e-commerce.onrender.com",
+    "https://raciefy-e-commerce-1.onrender.com",
 ]
 
 SPECTACULAR_SETTINGS = {
